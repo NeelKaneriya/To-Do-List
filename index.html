@@ -1,0 +1,41 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Todo List</title>
+      <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <div class="container">
+          <h2>To-do List</h2>
+          
+          <div class="input-container">
+              <input type="text" id="taskInput" placeholder="Enter your task...">
+              <div class="button-group">
+                  <button onclick="addTask()" class="btn-add">Add Task</button>
+                  <button id="btn-toggle-completed" onclick="toggleSection('completed')" class="btn-complete">Completed</button>
+                  <button id="btn-toggle-deleted" onclick="toggleSection('deleted')" class="btn-delete">Deleted</button>
+              </div>
+          </div>
+
+          <div class="sections">
+              <div class="section active-section">
+                  <h3>Active Tasks</h3>
+                  <div id="tasks" class="task-list"></div>
+              </div>
+
+              <div id="completed-section" class="section">
+                  <h3>Completed Tasks</h3>
+                  <div id="completed" class="task-list"></div>
+              </div>
+
+              <div id="deleted-section" class="section">
+                  <div class="deleted-header"><h3>Deleted Tasks</h3> <button id="clear-btn">Clear</button></div>
+                  <div id="deleted" class="task-list"></div>
+              </div>
+          </div>
+      </div>
+      <script src="script.js"></script>
+  </body>
+  </html>
